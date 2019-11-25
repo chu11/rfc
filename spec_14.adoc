@@ -298,6 +298,11 @@ Some common system attributes are:
  The value of the `cwd` attribute is a string containing the absolute
  path to the current working directory to use when spawning the task.
 
+ *job-name*::
+ The name of the job.  The name defaults to the first argument of the
+ command run by the user, or can be set by the user to an arbitrary
+ value.  This field may be used for searching or filtering jobs.
+
 === Example Jobspec
 
 Under the description above, the following is an example of a fully compliant
