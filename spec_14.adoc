@@ -298,10 +298,17 @@ Some common system attributes are:
  The value of the `cwd` attribute is a string containing the absolute
  path to the current working directory to use when spawning the task.
 
- *job-name*::
- The name of the job.  The name defaults to the first argument of the
- command run by the user, or can be set by the user to an arbitrary
- value.  This field may be used for searching or filtering jobs.
+ *job*::
+ The value of the `job` attribute is a dictionary containing
+ additional job metadata.  This metadata may be used for searching and
+ filtering of jobs.  Every `value` in the dictionary must be a string.
+ The application is free to create keys of any name, however the
+ following are reserved for special use:
+
+   *name*::
+   The `name` key contains the name of the job.  The default name of a
+   job is the first argument of the command run by the user, or it can be
+   set by the user to an arbitrary value.
 
 === Example Jobspec
 
