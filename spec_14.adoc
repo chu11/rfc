@@ -305,7 +305,7 @@ Some common system attributes are:
  The application is free to create keys of any name, however the
  following are reserved for special use:
 
-   *name*::
+   *name*:::
    The `name` key contains the name of the job.  The default name of a
    job is the first argument of the command run by the user, or it can be
    set by the user to an arbitrary value.
