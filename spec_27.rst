@@ -194,10 +194,9 @@ mode
 
 The mode string SHALL be one of the following:
 
-single
-  The job manager SHALL send a ``sched.alloc`` request only when there are
-  no outstanding ``sched.alloc`` requests.  This mode is only useful for simple
-  schedulers that run jobs strictly in the job manager queue order.
+limited=N
+  The job manager SHALL send ``sched.alloc`` requests up to the number
+  represented by ``N``.  ``N`` can be in the range of 1 to 2147483647.
 
 unlimited
   The job manager SHALL send a ``sched.alloc`` request for all jobs in SCHED
@@ -207,7 +206,7 @@ Example:
 
 .. code:: json
 
-   {"mode":"unlimited"}
+   {"mode":"limited=42"}
 
 The response payload SHALL be empty.
 
