@@ -12,7 +12,7 @@ digraph states {
         DEPEND;
         PRIORITY;
         SCHED;
-        RUN;
+        {rank=same; RUN; REATTACH;}
         CLEANUP;
     }
 
@@ -24,6 +24,9 @@ digraph states {
     CLEANUP -> INACTIVE;
 
     SCHED -> PRIORITY [label="flux-restart"]
+
+    RUN -> REATTACH [xlabel="flux-reattach"]
+    REATTACH -> RUN [xlabel="reattached"]
 
     edge [weight=0 color="red"];
 
